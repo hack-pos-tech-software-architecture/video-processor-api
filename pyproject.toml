@@ -4,7 +4,7 @@ version = "1.0.0"
 authors = [
   { name="Jhonatan Eduardo - RM350939", email="jhonatanepp@gmail.com" },
 ]
-description = "Tech Challenge Fase 4 - Food API"
+description = "Tech Challenge Fase 5 - Hack"
 readme = "README.md"
 requires-python = ">=3.10"
 
