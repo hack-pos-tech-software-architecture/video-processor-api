@@ -1,0 +1,1 @@
+https://github.com/jod35/JWT-Auth-for-Flask/blob/main/auth.py
