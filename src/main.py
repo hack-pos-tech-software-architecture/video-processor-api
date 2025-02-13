@@ -14,13 +14,11 @@ from adapters.http import (
     upload_controllers,
 )
 
-app = Flask("ExtractImagesAPI")
+app = Flask("VideoProcessorAPI")
 
+app.config["JWT_VERIFY_SUB"] = False
 app.config["JWT_SECRET_KEY"] = os.environ.get("JWT_SECRET_KEY")
 app.config["JWT_TOKEN_LOCATION"] = ["headers"]
-app.config["UPLOAD_FOLDER"] = "uploads"
-
-os.makedirs("uploads", exist_ok=True)
 
 jwt = JWTManager(app)
 
@@ -48,4 +46,4 @@ def root():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=8000, debug=True)
