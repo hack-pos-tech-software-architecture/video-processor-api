@@ -14,7 +14,7 @@ from adapters.http import (
     upload_controllers,
 )
 
-app = Flask("VideoProcessorAPI")
+app = Flask()
 
 app.config["JWT_VERIFY_SUB"] = False
 app.config["JWT_SECRET_KEY"] = os.environ.get("JWT_SECRET_KEY")
@@ -31,13 +31,6 @@ app.register_blueprint(upload_controllers.bp, url_prefix=BASE_PATH)
 
 
 app.json.sort_keys = False
-
-# from adapters.orm.models import UserModel, ProcessModel, SubprocessModel, SubprocessItemModel
-# from adapters.orm.config import get_database
-# db = get_database()
-
-# with db:
-#     db.create_tables([UserModel, ProcessModel, SubprocessModel, SubprocessItemModel])
 
 
 @app.get("/")
